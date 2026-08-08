@@ -7,6 +7,7 @@ import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import SmoothScroll from './components/ui/SmoothScroll';
 import ScrollAnimations from './components/ui/ScrollAnimations';
+import ChatAssistant from './components/ChatAssistant';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -15,6 +16,6 @@ function ScrollToTop() {
 }
 
 function App() {
-  return <SmoothScroll><ScrollAnimations><div className="min-h-screen"><ScrollToTop /><Navbar /><main><Routes><Route path="/" element={<HomePage />} /><Route path="/products" element={<ProductsPage />} /><Route path="/products/:id" element={<ProductDetailPage />} /></Routes></main><Footer /></div></ScrollAnimations></SmoothScroll>;
+  return <SmoothScroll><ScrollAnimations><div className="min-h-screen"><ScrollToTop /><Navbar /><main><Routes><Route path="/" element={<HomePage />} /><Route path="/products" element={<ProductsPage />} /><Route path="/products/:id" element={<ProductDetailPage />} /></Routes></main><Footer /><ChatAssistant /></div></ScrollAnimations></SmoothScroll>;
 }
 export default App;
